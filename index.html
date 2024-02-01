@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="top">
     
     <div class="skiplinks">
       <ul>
@@ -24,57 +24,64 @@
       </ul>
     </div>
 
-    <header>
-      <h1>Jam Box Studios</h1>
-      <nav>
+    <header role="banner">
+      <h1 role="heading" aria-level="1">Jam Box Studios</h1>
+      <nav role="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" aria-label="takes you to the home page">Home</a></li>
+          <li><a href="#" aria-label="takes you to the products pages">Products</a></li>
+          <li><a href="#" aria-label="takes you to the reservations page">Reservation</a></li>
+          <li><a href="#" aria-label="takes you to the studio page">Studio</a></li>
         </ul>
       </nav>
-      <img src="https://placekitten.com/1200/900" alt="Four adorable kittens">
+      <img src="https://placekitten.com/1200/900" alt="picture of kitten(s)">
     </header>
 
-    <main>
-      <h1 id="Welcome">Welcome to Jam Box</h1>
+    <main role="main">
+      <h1 id="Welcome" role="heading" aria-level="2">Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       
-      <section>
-        <h2 id="Owner">Meet the owner</h2>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+      <section role="complementary">
+        <h2 id="Owner" role="heading" aria-level="2">Meet the owner</h2>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
-        <h2 id="Address">Address</h2>
-        <ul>
-          <li>Jabox Studios</li>
-          <li>123 Guitar Road</li>
-          <li>Musicviller, Danceistan</li>
-          <li>B3T 0L0</li>
+        <h2 id="Address" role="heading" aria-level="2">Address</h2>
+        <ul itemscope itemtype="https://schema.org/PostalAddress">
+          <li itemprop="addressLocality">Jabox Studios</li>
+          <li itemprop="streetAddress">123 Guitar Road</li>
+          <li itemprop="addressCountry">Musicviller, Danceistan</li>
+          <li itemprop="postalCode">B3T 0L0</li>
         </ul>
       </section>
 
       <section id="Contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <label>Your Message</label>
-          <textarea></textarea>
-          <button type="submit">Send</button>
+        <h2 role="heading" aria-level="2">Contact Us</h2>
+        <form action="thanks.html" role="form">
+          <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="Full Name" placeholder=" Your Full Name">
+
+          <label for="email">Email</label>  
+            <input type="email" id="email" name="Email" placeholder="Your Email">
+
+          <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" placeholder="Your Subject">
+
+          <label for="yourmessage">Your Message</label>
+            <textarea id="yourmessage"></textarea>
+
+          <button role="button" type="submit" onclick="alert ('Your Message has been sent')" aria-label="Sends your message">Send</button>
         </form>
       </section>
     </main>
     
-    <footer>
-      &copy; 2021 Jam Box Studios
+    <footer role="contentinfo">
+      <p>&copy; 2021 Jam Box Studios</p>
+      <a href="#top">Back to Top</a>
     </footer>
 
   </div>

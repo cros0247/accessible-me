@@ -25,13 +25,27 @@ h2 {
 /* ------------------------------------------------------ */
 
 .skiplinks ul {
-  text-decoration: none;
   list-style-type: none;
 }
 
-.skiplinks ul li a {
+.skiplinks{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skiplinks a{
+  position: absolute;
+  top: -3em;
+  background-color: black;
+  color:white;
+  padding: .5em 1em;
+  font-weight: bold;
   text-decoration: none;
-  list-style-type: none;
+}
+
+.skiplinks a:focus{
+  top: 0;
 }
 
 /* ------------------------------------------------------- */
@@ -54,16 +68,31 @@ nav ul li a {
   color: inherit;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 10px;
 }
+
+nav ul li a:hover{
+  text-decoration: underline;
+}
+
+nav a:focus{
+  outline: 3px solid black;
+}
+
+/* ------------------------------------------------------- */
 
 img {
   width: 100%;
   height: auto;
 }
 
+/* ------------------------------------------------------- */
+
 main ul {
   list-style-type: none;
 }
+
+/* ------------------------------------------------------- */
 
 form input, form textarea {
   display: block;
@@ -85,6 +114,8 @@ form button {
   padding: 1rem;
   text-transform: uppercase;
 }
+
+/* ------------------------------------------------------- */
 
 footer {
   padding: 2rem 0;
